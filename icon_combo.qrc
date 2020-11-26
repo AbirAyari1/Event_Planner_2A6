@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>rec/Argent icon.png</file>
+        <file>rec/icon stat.jpg</file>
+    </qresource>
+</RCC>
