@@ -1,6 +1,6 @@
 #include "employe.h"
 
-
+//constructeur par defaut
 Employe::Employe()
 {id=0;
  nom="";
@@ -10,7 +10,7 @@ Employe::Employe()
  score=0;
 }
 
-
+//constructeur parametre
 Employe::Employe(int id,QString nom,QString prenom,QString email,QString fonction,int score)
 
 { this->id=id; // int
@@ -22,7 +22,7 @@ Employe::Employe(int id,QString nom,QString prenom,QString email,QString fonctio
 
 }
 
-
+//ajouter employe
 bool Employe::ajouter()
 {QSqlQuery query;
  QString res1=QString::number(id);
@@ -41,34 +41,30 @@ return query.exec(); //execution de la requete
 }
 
 
-
+//afficher employe
 QSqlQueryModel * Employe::afficher()
 { QSqlQueryModel * model=new QSqlQueryModel(); //creation d'un pointeur
 
   model->setQuery("select * from EMPLOYE");
-  model->setHeaderData(0, Qt::Horizontal, QObject::tr("ID"));
-  model->setHeaderData(1, Qt::Horizontal, QObject::tr("NOM"));
-  model->setHeaderData(2, Qt::Horizontal, QObject::tr("PRENOM"));
-  model->setHeaderData(3, Qt::Horizontal, QObject::tr("EMAIL"));
-  model->setHeaderData(4, Qt::Horizontal, QObject::tr("FONCTION"));
-  model->setHeaderData(5, Qt::Horizontal, QObject::tr("SCORE"));
+
   return model;
 
 }
 
+//supression employe
 bool Employe::supprimer(int id)
 { QSqlQuery query;
   QString res=QString::number(id);
-  query.prepare("Delete from employes where ID = :id ");
+  query.prepare("Delete from EMPLOYE where ID = :id ");
   query.bindValue(":id",res); //affectation et association des val
   return query.exec();}
 
-
-bool Employe::modifier(int id)
+//modification employe
+bool Employe::modifier()
 { QSqlQuery query;
   QString res=QString::number(id);
   QString res1=QString::number(score);
-  query.prepare("Update Employe set ID=:id, NOM=:nom, PRENOM=:prenom, EMAIL=:email, FONCTION=:fonction, SCORE=:score");
+  query.prepare("Update Employe set ID=:id, NOM=:nom, PRENOM=:prenom, EMAIL=:email, FONCTION=:fonction, SCORE=:score where ID=:id");
   query.bindValue(":id",res);
   query.bindValue(":nom",nom);
   query.bindValue(":prenom",prenom);
@@ -77,7 +73,6 @@ bool Employe::modifier(int id)
   query.bindValue(":score",res1);
   return query.exec();
 }
-
 
 
 

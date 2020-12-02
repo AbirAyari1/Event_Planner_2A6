@@ -9,7 +9,6 @@ class Employe
 { QString nom,prenom,email,fonction;
   int score,id;
 
-
 public:
     //Constructeurs
     Employe();
@@ -37,10 +36,7 @@ public:
     bool ajouter();
     QSqlQueryModel * afficher();
     bool supprimer(int);
-    bool modifier (int);
-
-
-
+    bool modifier ();
 
 
 };

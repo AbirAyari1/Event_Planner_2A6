@@ -1,9 +1,8 @@
-QT       += core gui
-QT += sql
+QT       += core gui network sql
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
-CONFIG += console
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -13,14 +12,18 @@ SOURCES += \
     conge.cpp \
     connection.cpp \
     employe.cpp \
+    exportexcelobject.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    smtp.cpp
 
 HEADERS += \
     conge.h \
     connection.h \
     employe.h \
-    mainwindow.h
+    exportexcelobject.h \
+    mainwindow.h \
+    smtp.h
 
 FORMS += \
     mainwindow.ui
