@@ -6,13 +6,13 @@
 
 
 class Employe
-{ QString nom,prenom,email,fonction;
+{ QString nom,prenom,email,fonction,mdp;
   int score,id;
 
 public:
     //Constructeurs
     Employe();
-    Employe(int,QString,QString,QString,QString,int);
+    Employe(int,QString,QString,QString,QString,int,QString);
 
     //Getters
 
@@ -22,6 +22,7 @@ public:
     QString getEmail(){return email;}
     QString getFonction(){return fonction;}
     int getScore(){return score;}
+    QString getMdp(){return mdp;}
 
     //Setters
 
@@ -31,6 +32,7 @@ public:
     void setEmail(QString email){this->email=email;}
     void setFonction(QString fonction){this->fonction=fonction;}
     void setScore(int score){this->score=score;}
+    void setMdp(QString mdp){this->mdp=mdp;}
 
     //CRUD
     bool ajouter();

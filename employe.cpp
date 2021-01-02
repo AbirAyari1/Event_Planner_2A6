@@ -8,10 +8,11 @@ Employe::Employe()
  email="";
  fonction="";
  score=0;
+ mdp="";
 }
 
 //constructeur parametre
-Employe::Employe(int id,QString nom,QString prenom,QString email,QString fonction,int score)
+Employe::Employe(int id,QString nom,QString prenom,QString email,QString fonction,int score,QString mdp)
 
 { this->id=id; // int
   this->nom=nom;
@@ -19,7 +20,7 @@ Employe::Employe(int id,QString nom,QString prenom,QString email,QString fonctio
   this->email=email;
   this->fonction=fonction;
   this->score=score; // int
-
+  this->mdp=mdp;
 }
 
 //ajouter employe
@@ -28,14 +29,15 @@ bool Employe::ajouter()
  QString res1=QString::number(id);
  QString res2=QString::number(score);
 
-query.prepare("INSERT INTO EMPLOYE (ID,NOM,PRENOM,EMAIL,FONCTION,SCORE)"
-              "VALUES (:id, :nom, :prenom, :email, :fonction, :score)");
+query.prepare("INSERT INTO EMPLOYE (ID,NOM,PRENOM,EMAIL,FONCTION,SCORE,MDP)"
+              "VALUES (:id, :nom, :prenom, :email, :fonction, :score, :mdp)");
 query.bindValue(":id",res1);
 query.bindValue(":nom",nom);
 query.bindValue(":prenom",prenom);
 query.bindValue(":email",email);
 query.bindValue(":fonction",fonction);
 query.bindValue(":score",res2);
+query.bindValue(":mdp",mdp);
 return query.exec(); //execution de la requete
 //bind : ajout aveugle
 }
@@ -64,13 +66,14 @@ bool Employe::modifier()
 { QSqlQuery query;
   QString res=QString::number(id);
   QString res1=QString::number(score);
-  query.prepare("Update Employe set ID=:id, NOM=:nom, PRENOM=:prenom, EMAIL=:email, FONCTION=:fonction, SCORE=:score where ID=:id");
+  query.prepare("Update Employe set ID=:id, NOM=:nom, PRENOM=:prenom, EMAIL=:email, FONCTION=:fonction, SCORE=:score, MDP=:mdp where ID=:id");
   query.bindValue(":id",res);
   query.bindValue(":nom",nom);
   query.bindValue(":prenom",prenom);
   query.bindValue(":email",email);
   query.bindValue(":fonction",fonction);
   query.bindValue(":score",res1);
+  query.bindValue(":mdp",mdp);
   return query.exec();
 }
 

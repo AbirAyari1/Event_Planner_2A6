@@ -1,19 +1,11 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include "employe.h"
-#include "conge.h"
+
 #include <QMainWindow>
-#include <QDialog>
-#include "connection.h"
-#include "smtp.h"
-#include <QSortFilterProxyModel>
-#include <QTextTableFormat>
-#include <QStandardItemModel>
-#include <QDialog>
-#include <QFileDialog>
-#include "exportexcelobject.h"
-
-
+#include "connecxion.h"
+#include <QDebug>
+#include "employe.h"
+#include "accesscard.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,62 +16,24 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    QSortFilterProxyModel *proxy_emp,*proxy_co;
-
-
-void update_emp_list();
-
-void show_tables();
-
-private slots:
-
-
-void on_Ajouter_Employe_clicked();
-
-void on_supprimer_employe_clicked();
-
-void on_tableView_activated(const QModelIndex &index);
-
-void on_modifier_employe_clicked();
+    QString user() const ;
+ //QString userID;
+ private slots:
+    void update_label();
+    void on_pushButton_submit_clicked();
 
 
 
-void sendMail();
-void mailSent(QString);
-void browse();
-
-void on_tableView_clicked(const QModelIndex &index);
-
-void on_comboBox_2_currentIndexChanged(int index);
-
-void on_lineEdit_23_textChanged(const QString &arg1);
-
-void on_lineEdit_26_textChanged(const QString &arg1);
-
-void on_comboBox_5_currentIndexChanged(int index);
-
-void on_tableView_3_clicked(const QModelIndex &index);
-
-void on_pushButton_27_clicked();
-
-void on_pushButton_clicked();
-
-void on_pushButton_12_clicked();
-
-void on_tableView_3_activated(const QModelIndex &index);
-
-void on_pushButton_33_clicked();
+    void on_pushButton_submit_2_clicked();
 
 private:
     Ui::MainWindow *ui;
-        QStringList files;
-    Employe tmpemploye;
-    Conge tmpco;
-
-    int id_emp=0,id_co=0,selcomemp=0,selcomco=0;
-
+    AccessCard A;
+    QByteArray data;
+    QString id;
+    int e;
 };
 #endif // MAINWINDOW_H
