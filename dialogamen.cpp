@@ -1,5 +1,5 @@
-/* #include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "dialogamen.h"
+#include "ui_dialogamen.h"
 #include <QMessageBox>
 #include <QDate>
 #include <QDateEdit>
@@ -10,6 +10,7 @@
 #include "marchandise.h"
 #include "commande.h"
 #include "smtp.h"
+#include "arduino.h"
 #include <QDebug>
 #include<QComboBox>
 #include <QPieSlice>
@@ -20,22 +21,19 @@
 #include<QUrl>
 #include <QtCharts/QChartView>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QDialog>
 #include <QtCharts/QBarSeries>
 #include <QtCharts/QBarSet>
 #include <QtCharts/QLegend>
 #include"QSortFilterProxyModel"
 #include <QPlainTextEdit>
 #include <QPlainTextDocumentLayout>
+
 QT_CHARTS_USE_NAMESPACE
 
-
-
-
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+Dialogamen::Dialogamen(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::Dialogamen)
 {
     ui->setupUi(this);
     ui->comboBox_mail->setModel(tmpfournisseur.afficher_email());
@@ -56,23 +54,73 @@ ui->comboBox_ID_fournisseur->setModel(tmpfournisseur.afficher());
 ui->comboBox_id_fournisseur_2->setModel(tmpcommande.afficher());
 ui->tabfournisseur->setModel(tmpfournisseur.afficher());
 ui->tabmarchandise->setModel(tmpmarchandise.afficher());
+// arduino
+      int ret=A.connect_arduino();
+      switch(ret){
+      case(0):qDebug()<< "arduino is availble and connected to :"<< A.getarduino_port_name();
+          break;
+      case(1):qDebug()<< "arduino is availble but not connected to :"<< A.getarduino_port_name();
+          break;
+      case(-1):qDebug()<< "arduino is not availble";
+      }
+      QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
 
-
-
-
-
+      //fin arduino
 
 }
 
-MainWindow::~MainWindow()
+
+
+
+//arduino
+
+void Dialogamen::update_label()
+{
+    data=A.read_from_arduino();
+    QString DataAsString = QString(data);
+    qDebug()<< data;
+
+     ui->label_2->setText("temp : "+data);
+
+    if (data=="21"||data=="22"||data=="23"||data=="24"){
+        if (messageboxactive==0){
+            alert=1;
+        }
+
+
+    }
+    if (alert==1){
+         alert=0;
+         messageboxactive=1;
+        int reponse = QMessageBox::question(this, "led", "allumer led", QMessageBox::Yes |  QMessageBox::No);
+                                   if (reponse == QMessageBox::Yes)
+                                   {
+                                     led=1;
+                                   }
+                                   if (reponse == QMessageBox::No)
+                                   {
+                                      led=0;
+                                   }
+
+    }
+    if (led==1){
+        A.write_to_arduino("1");
+    }
+    if (data=="20"||data=="19"||data=="18"||data=="17"||data=="16"){
+        A.write_to_arduino("0");
+        led=0;
+    }
+
+}
+
+//fin arduino
+
+Dialogamen::~Dialogamen()
 {
     delete ui;
 }
 
-
-
-
-void MainWindow::on_pushButton_ajouter_fournisseur_clicked()
+void Dialogamen::on_pushButton_ajouter_fournisseur_clicked()
 {   bool test;
     int id= ui->lineEdit_1->text().toInt();
     QString nom= ui->lineEdit_2->text();
@@ -112,7 +160,7 @@ void MainWindow::on_pushButton_ajouter_fournisseur_clicked()
                                        "Click Cancel to exit."), QMessageBox::Cancel);
 }
 
-void MainWindow::on_pushButton_supprimer_fournisseur_clicked()
+void Dialogamen::on_pushButton_supprimer_fournisseur_clicked()
 {
     int res1=ui->comboBox_ID_fournisseur->currentText().toInt();
             bool test=tmpfournisseur.supprimer(res1);
@@ -134,7 +182,7 @@ void MainWindow::on_pushButton_supprimer_fournisseur_clicked()
 
 
 
-void MainWindow::on_pushButton_modifier_fournisseur_clicked()
+void Dialogamen::on_pushButton_modifier_fournisseur_clicked()
 {
           int id= ui->comboBox_ID_fournisseur_modifier->currentText().toInt();
           int num_telephone= ui->lineEdit_21->text().toInt();
@@ -154,7 +202,7 @@ void MainWindow::on_pushButton_modifier_fournisseur_clicked()
                                        "Click Cancel to exit."), QMessageBox::Cancel);
 }
 
-void MainWindow::on_pushButton_ajouter_marchandise_clicked()
+void Dialogamen::on_pushButton_ajouter_marchandise_clicked()
 {    bool test;
            QString type=ui->lineEdit_27->text();
            int quantite= ui->lineEdit_7->text().toInt();
@@ -192,7 +240,7 @@ void MainWindow::on_pushButton_ajouter_marchandise_clicked()
                                        "Click Cancel to exit."), QMessageBox::Cancel);
 }
 
-void MainWindow::on_pushButton_modifier_marchandise_clicked()
+void Dialogamen::on_pushButton_modifier_marchandise_clicked()
 {
           QString type= ui->comboBox_TYPE_marchandise_2->currentText();
           int quantite= ui->lineEdit_30->text().toInt();
@@ -218,7 +266,7 @@ void MainWindow::on_pushButton_modifier_marchandise_clicked()
                                        "Click Cancel to exit."), QMessageBox::Cancel);
 }
 
-void MainWindow::on_pushButton_supprimer_marchandise_clicked()
+void Dialogamen::on_pushButton_supprimer_marchandise_clicked()
 {
     QString type=ui->comboBox_TYPE_marchandise->currentText();
         bool test=tmpmarchandise.supprimer(type);
@@ -245,7 +293,7 @@ void MainWindow::on_pushButton_supprimer_marchandise_clicked()
 
 
 
-void MainWindow::on_pushButton_ajouter_commande_clicked()
+void Dialogamen::on_pushButton_ajouter_commande_clicked()
 {   bool test;
     int id= ui->comboBox_id_fournisseur->currentText().toInt();
     int numero= ui->comboBox_numero_commande->currentText().toInt();
@@ -288,7 +336,7 @@ if(test)
 }
 
 
-void MainWindow::on_pushButton_modifier_commande_clicked()
+void Dialogamen::on_pushButton_modifier_commande_clicked()
 {
     int id= ui->comboBox_id_fournisseur_2->currentText().toInt();
     int quantite= ui->lineEdit_29->text().toInt();
@@ -313,7 +361,7 @@ void MainWindow::on_pushButton_modifier_commande_clicked()
 }
 
 
-void MainWindow::on_pushButton_supprimer_commande_clicked()
+void Dialogamen::on_pushButton_supprimer_commande_clicked()
 {
     int res=ui->comboBox_ID_commande->currentText().toInt();
             bool test=tmpcommande.supprimer(res);
@@ -334,7 +382,7 @@ void MainWindow::on_pushButton_supprimer_commande_clicked()
                                         "Click Cancel to exit."), QMessageBox::Cancel);
 }
 
-void MainWindow::on_pushButton_rechercher_fournisseur_clicked()
+void Dialogamen::on_pushButton_rechercher_fournisseur_clicked()
 {
     int id;
     id=ui->lineEdit_13->text().toInt();
@@ -347,7 +395,7 @@ void MainWindow::on_pushButton_rechercher_fournisseur_clicked()
 }
 }
 
-void MainWindow::on_pushButton_rechercher_marchandise_clicked()
+void Dialogamen::on_pushButton_rechercher_marchandise_clicked()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
         QSqlQuery q;
@@ -358,7 +406,7 @@ void MainWindow::on_pushButton_rechercher_marchandise_clicked()
         ui->tabmarchandise->setModel(tmpmarchandise.rechercher_type(q)) ;
 }
 
-void MainWindow::on_pushButton_rechercher_commande_clicked()
+void Dialogamen::on_pushButton_rechercher_commande_clicked()
 {
     int id;
 
@@ -372,7 +420,7 @@ void MainWindow::on_pushButton_rechercher_commande_clicked()
 
 
 
-void MainWindow::on_radioButton_tri_fournisseur_clicked()
+void Dialogamen::on_radioButton_tri_fournisseur_clicked()
 {
     ui->tabfournisseur->setModel( tmpfournisseur.afficher_tri());
 }
@@ -381,27 +429,27 @@ void MainWindow::on_radioButton_tri_fournisseur_clicked()
 
 
 
-void MainWindow::on_radioButton_type_marchandise_clicked()
+void Dialogamen::on_radioButton_type_marchandise_clicked()
 {
     ui->tabmarchandise->setModel( tmpmarchandise.afficher_tri_type());
 }
 
-void MainWindow::on_radioButton_quantite_marchandise_clicked()
+void Dialogamen::on_radioButton_quantite_marchandise_clicked()
 {
     ui->tabmarchandise->setModel( tmpmarchandise.afficher_tri_quantite());
 }
 
-void MainWindow::on_radioButton_prix_marchandise_clicked()
+void Dialogamen::on_radioButton_prix_marchandise_clicked()
 {
     ui->tabmarchandise->setModel( tmpmarchandise.afficher_tri_prix());
 }
 
-void MainWindow::on_radioButton_numero_marchandise_clicked()
+void Dialogamen::on_radioButton_numero_marchandise_clicked()
 {
     ui->tabmarchandise->setModel( tmpmarchandise.afficher_tri_numero());
 }
 
-void MainWindow::on_radioButton_produit_marchandise_clicked()
+void Dialogamen::on_radioButton_produit_marchandise_clicked()
 {
     ui->tabmarchandise->setModel( tmpmarchandise.afficher_tri_produit());
 }
@@ -409,32 +457,32 @@ void MainWindow::on_radioButton_produit_marchandise_clicked()
 
 
 
-void MainWindow::on_radioButton_id_commande_clicked()
+void Dialogamen::on_radioButton_id_commande_clicked()
 {
   ui->tabcommande->setModel( tmpcommande.afficher_tri_ID());
 }
 
-void MainWindow::on_radioButton_numero_commande_clicked()
+void Dialogamen::on_radioButton_numero_commande_clicked()
 {
     ui->tabcommande->setModel( tmpcommande.afficher_tri_numero());
 }
 
-void MainWindow::on_radioButton_quantite_commande_clicked()
+void Dialogamen::on_radioButton_quantite_commande_clicked()
 {
     ui->tabcommande->setModel( tmpcommande.afficher_tri_quantite());
 }
 
-void MainWindow::on_radioButton_produit_commande_clicked()
+void Dialogamen::on_radioButton_produit_commande_clicked()
 {
     ui->tabcommande->setModel( tmpcommande.afficher_tri_produit());
 }
 
-void MainWindow::on_radioButton_prix_total_commande_clicked()
+void Dialogamen::on_radioButton_prix_total_commande_clicked()
 {
     ui->tabcommande->setModel( tmpcommande.afficher_tri_prix_total());
 }
 
-void MainWindow::on_pushButton_imprimer_commande_clicked()
+void Dialogamen::on_pushButton_imprimer_commande_clicked()
 {
     //QDateTime datecreation = date.currentDateTime();
         //QString afficheDC = "Date de Creation PDF : " + datecreation.toString() ;
@@ -486,14 +534,14 @@ void MainWindow::on_pushButton_imprimer_commande_clicked()
 
 
 
-void MainWindow::mailSent(QString status)
+void Dialogamen::mailSent(QString status)
 {
     if(status == "Message sent")
         N.mail_Fournisseur();
 }
 
 
-void MainWindow::on_pushButton_Mail_clicked()
+void Dialogamen::on_pushButton_Mail_clicked()
 {
     Smtp* smtp = new Smtp("amen.benkhalifaaaaaa@gmail.com","amenamen1234","smtp.gmail.com",465);
        connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
@@ -503,7 +551,7 @@ void MainWindow::on_pushButton_Mail_clicked()
 
 
 
-void MainWindow::on_pushButton_Statistique_clicked()
+void Dialogamen::on_pushButton_Statistique_clicked()
 {
     QSqlQueryModel * model= new QSqlQueryModel();
                         model->setQuery("select * from COMMANDE where PRIX_TOTAL < 5 ");
@@ -549,4 +597,5 @@ void MainWindow::on_pushButton_Statistique_clicked()
                         chartView->setRenderHint(QPainter::Antialiasing);
                         chartView->resize(1000,500);
                         chartView->show();
-}*/
+}
+

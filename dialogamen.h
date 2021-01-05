@@ -1,24 +1,25 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
-#include <QMainWindow>
+#ifndef DIALOGAMEN_H
+#define DIALOGAMEN_H
+
+#include <QDialog>
 #include "fournisseur.h"
 #include "marchandise.h"
 #include "commande.h"
 #include "notification.h"
+#include"arduino.h"
+namespace Ui {
+class Dialogamen;
+}
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
-
-class MainWindow : public QMainWindow
+class Dialogamen : public QDialog
 {
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
-/*private slots:
+    explicit Dialogamen(QWidget *parent = nullptr);
+    ~Dialogamen();
+int messageboxactive,alert,led;
+private slots:
 
     void on_pushButton_ajouter_fournisseur_clicked();
 
@@ -82,13 +83,16 @@ public:
     void on_pushButton_Statistique_clicked();
 
 
+
+    void update_label();
 private:
-    Ui::MainWindow *ui;
+    Ui::Dialogamen *ui;
     fournisseur tmpfournisseur;
     marchandise tmpmarchandise;
     commande tmpcommande;
-    Notification N;*/
-
-
+    Notification N;
+    arduino A ;
+      QByteArray data;
 };
-#endif // MAINWINDOW_H
+
+#endif // DIALOGAMEN_H

@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "dialogamen.h"
 #include "connexion.h"
 #include"fournisseur.h"
 #include"marchandise.h"
@@ -12,7 +12,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    Dialogamen w;
     Connexion c;
        bool test=c.ouvrirConnexion();
        if(test)
