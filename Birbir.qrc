@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/newb">
+        <file>Birbir.qrc</file>
+    </qresource>
+</RCC>
