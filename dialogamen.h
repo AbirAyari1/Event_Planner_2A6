@@ -92,7 +92,7 @@ private:
     commande tmpcommande;
     Notification N;
     arduino A ;
-      QByteArray data;
+     QByteArray data;
 };
 
 #endif // DIALOGAMEN_H
