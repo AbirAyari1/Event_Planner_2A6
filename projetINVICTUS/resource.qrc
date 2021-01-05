@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/image"/>
+    <qresource prefix="/new/prefix1">
+        <file>C:/Users/Asma Srairi/Pictures/color_nude_771x451.png</file>
+        <file>C:/Users/Asma Srairi/Pictures/image projet.jpg</file>
+        <file>C:/Users/Asma Srairi/Pictures/v2.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix2"/>
+</RCC>

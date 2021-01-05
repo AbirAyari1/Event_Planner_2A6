@@ -1,0 +1,2705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialogamen</class>
+ <widget class="QDialog" name="Dialogamen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>571</width>
+    <height>391</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTabWidget" name="Tab">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>621</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/new/prefix1/background.jpg);</string>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Triangular</enum>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Gestion des fournisseurs</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>581</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+	
+	background-image: url(:/new/prefix1/background.jpg);
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Ajouter</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_13">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>581</width>
+         <height>391</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Fournisseur</string>
+       </property>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>100</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Nom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_1">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>60</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_33">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>140</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Prénom&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>100</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_34">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>180</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Num. Tel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_3">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>140</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_35">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>60</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;ID (CIN)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_4">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>180</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_39">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>220</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Email&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_5">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>220</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_ajouter_fournisseur">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>130</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>OK</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>50</y>
+          <width>16</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_6">
+      <attribute name="title">
+       <string>Afficher</string>
+      </attribute>
+      <widget class="QLabel" name="label_37">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>20</y>
+         <width>81</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;ID (CIN)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_13">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>20</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_rechercher_fournisseur">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>20</y>
+         <width>91</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Rechercher</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_22">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>240</y>
+         <width>231</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QRadioButton" name="radioButton_tri_fournisseur">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>20</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par ID</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QTableView" name="tabfournisseur">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>60</y>
+         <width>501</width>
+         <height>161</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>Modifier</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_14">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>571</width>
+         <height>391</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Fournisseur</string>
+       </property>
+       <widget class="QLabel" name="label_47">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>160</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Num. Tel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_48">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>110</y>
+          <width>131</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;ID (CIN)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_21">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>160</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_ID_fournisseur_modifier">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>110</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_24">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>230</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Annuler</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_modifier_fournisseur">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>230</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>200</y>
+          <width>341</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>Supprimer</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_15">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>981</width>
+         <height>441</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Fournisseur</string>
+       </property>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>70</y>
+          <width>421</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;ID du fournisseur à supprimer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_supprimer_fournisseur">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>190</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>OK</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_ID_fournisseur">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>140</y>
+          <width>231</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Gestion des Marchandises</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>571</width>
+       <height>391</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+	
+	background-image: url(:/new/prefix1/background.jpg);
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <widget class="QWidget" name="tab_10">
+      <attribute name="title">
+       <string>Ajouter</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>971</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Marchandise</string>
+       </property>
+       <widget class="QLabel" name="label_23">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>160</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_24">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>120</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Quantité&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_7">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>120</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_8">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>160</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_26">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>80</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_27">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>80</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_40">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>200</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Numéro&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_49">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>240</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_28">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>240</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_35">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>200</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_ajouter_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>160</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_3">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>60</y>
+          <width>16</width>
+          <height>201</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_11">
+      <attribute name="title">
+       <string>Modifier</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_16">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>0</y>
+         <width>971</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Marchandise</string>
+       </property>
+       <widget class="QLabel" name="label_44">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>91</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Quantité&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_45">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>141</y>
+          <width>81</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Prix&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_46">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>40</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Type&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_30">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>90</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_31">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>140</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_TYPE_marchandise_2">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>40</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_50">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>191</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Numéro&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_51">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>241</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_36">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>190</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_37">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>240</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_modifier_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>140</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_4">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>40</y>
+          <width>20</width>
+          <height>221</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_12">
+      <attribute name="title">
+       <string>Afficher</string>
+      </attribute>
+      <widget class="QTableView" name="tabmarchandise">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>90</y>
+         <width>301</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_20">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>90</y>
+         <width>191</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QRadioButton" name="radioButton_type_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>20</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Type</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_quantite_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>50</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Quantité</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_prix_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>80</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Prix</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_numero_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>110</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Numéro</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_produit_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>140</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Produit</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_38">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;TYPE&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_14">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>30</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_rechercher_marchandise">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>30</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Rechercher</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_16">
+      <attribute name="title">
+       <string>Supprimer</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>10</y>
+         <width>711</width>
+         <height>361</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Suppression</string>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>80</y>
+          <width>371</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Type marchandise supprimer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_supprimer_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>200</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;
+</string>
+        </property>
+        <property name="text">
+         <string>OK</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_TYPE_marchandise">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>140</y>
+          <width>221</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_17">
+    <attribute name="title">
+     <string>Bon de commande</string>
+    </attribute>
+    <widget class="QTabWidget" name="tabWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1500</width>
+       <height>700</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab {
+	
+	background-image: url(:/new/prefix1/background.jpg);
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid#C4C4C3;
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    min-width:20ex;
+    padding: 2px;
+     font: bold, &quot;Comic Sans MS&quot;;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tab_18">
+      <attribute name="title">
+       <string>Ajouter </string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1001</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/pic/pic.jpeg);</string>
+       </property>
+       <property name="title">
+        <string>Bon de commande</string>
+       </property>
+       <widget class="QLabel" name="label_27">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;ID &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>80</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Numéro&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>120</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Quantité&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_42">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>120</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_30">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>160</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Produit&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_ajouter_commande">
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>140</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>200</y>
+          <width>111</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Prix total&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_44">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>200</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>240</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Date&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_45">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>240</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="date">
+         <date>
+          <year>2020</year>
+          <month>1</month>
+          <day>1</day>
+         </date>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_id_fournisseur">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>40</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_numero_commande">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>80</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_produit_commande">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>160</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_5">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>50</y>
+          <width>41</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_21">
+      <attribute name="title">
+       <string>Afficher</string>
+      </attribute>
+      <widget class="QTableView" name="tabcommande">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>261</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_21">
+       <property name="geometry">
+        <rect>
+         <x>330</x>
+         <y>70</y>
+         <width>221</width>
+         <height>181</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <widget class="QRadioButton" name="radioButton_produit_commande">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>110</y>
+          <width>131</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Produit</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_quantite_commande">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>80</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Quantité</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_prix_total_commande">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>140</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Prix Total</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_numero_commande">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par Numéro</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_id_commande">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>20</y>
+          <width>131</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Trier par ID</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="pushButton_Statistique">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>270</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Statistique</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_imprimer_commande">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>270</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Imprimer</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_rechercher_commande">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>30</y>
+         <width>131</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Rechercher</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>161</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;ID Bon de commande&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_12">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>30</y>
+         <width>151</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_19">
+      <attribute name="title">
+       <string>Modifier</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_9">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>961</width>
+         <height>381</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Bon de commande</string>
+       </property>
+       <widget class="QPushButton" name="pushButton_modifier_commande">
+        <property name="geometry">
+         <rect>
+          <x>442</x>
+          <y>140</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Modifier</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_41">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>110</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Quantité&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_42">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>160</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Prix total&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_43">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>220</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Date&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_29">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>110</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_33">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>160</y>
+          <width>141</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>220</y>
+          <width>131</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>60</y>
+          <width>91</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;ID&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_id_fournisseur_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>60</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="Line" name="line_6">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>60</y>
+          <width>16</width>
+          <height>191</height>
+         </rect>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_20">
+      <attribute name="title">
+       <string>Supprimer</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_10">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1021</width>
+         <height>421</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/pic/pic.jpeg);</string>
+       </property>
+       <property name="title">
+        <string>Suppression</string>
+       </property>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>100</y>
+          <width>331</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: #FFF0F5;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;ID bon de commande à supprimer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_supprimer_commande">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>190</y>
+          <width>93</width>
+          <height>28</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>OK</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_ID_commande">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>151</y>
+          <width>201</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_7">
+      <attribute name="title">
+       <string>E-mailing</string>
+      </attribute>
+      <widget class="QGroupBox" name="groupBox_11">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1021</width>
+         <height>421</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/pic/pic.jpeg);</string>
+       </property>
+       <property name="title">
+        <string>E-mailing</string>
+       </property>
+       <widget class="QLineEdit" name="subject">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>110</y>
+          <width>441</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_mail">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>70</y>
+          <width>441</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="msg">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>150</y>
+          <width>441</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 10px;
+padding: 0 8px;
+background: white;
+font: bold, &quot;Comic Sans MS&quot;;;
+text-align:center;
+
+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_Mail">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>260</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: 2px solid black;
+border-radius: 10px;
+padding: 0 8px;
+background:#FFB6C1	;
+font: bold, &quot;Comic Sans MS&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Send</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
