@@ -25,6 +25,13 @@ SOURCES += \
     employe.cpp \
     evenement.cpp \
     exportexcelobject.cpp \
+    final/connexion.cpp \
+    final/dialogeemmanuel.cpp \
+    final/dialogemmanuel.cpp \
+    final/invitation.cpp \
+    final/invites.cpp \
+    final/main.cpp \
+    final/table.cpp \
     fournisseur.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -57,6 +64,13 @@ HEADERS += \
     employe.h \
     evenement.h \
     exportexcelobject.h \
+    final/connexion.h \
+    final/dialogeemmanuel.h \
+    final/dialogemmanuel.h \
+    final/invitation.h \
+    final/invites.h \
+    final/smtpNgue.h \
+    final/table.h \
     fournisseur.h \
     mainwindow.h \
     marchandise.h \
@@ -75,6 +89,7 @@ FORMS += \
     ../../../../Downloads/final2/final/dialogeemmanuel.ui \
     dialogahmed.ui \
     dialogamen.ui \
+    final/dialogeemmanuel.ui \
     mainwindow.ui \
     projetINVICTUS/dialogasma.ui \
     rh.ui
@@ -87,4 +102,13 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     ../../../../Downloads/final2/final/ressources.qrc \
     background.qrc \
+    final/ressources.qrc
+
+SUBDIRS += \
+    final/final.pro
+
+DISTFILES += \
+    final/img/filter-solid (1).svg \
+    final/img/print-solid.svg \
+    final/img/search-solid (1).svg
 

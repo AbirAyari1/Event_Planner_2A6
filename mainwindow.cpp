@@ -2,9 +2,9 @@
 #include "ui_mainwindow.h"
 #include "rh.h"
 #include "dialogamen.h"
-#include "C:\Users\Laptop\Downloads\final2\final\dialogeemmanuel.h"
+#include "C:\Users\Laptop\Documents\Project\AbirAyari\EventPlanner\Event_Planner_2A6\final\dialogeemmanuel.h"
 #include <QMessageBox>
-#include "C:\Users\Laptop\Documents\Project\AbirAyari\Event_Planner_2A6 - Copie\projetINVICTUS\dialogasma.h"
+#include "C:\Users\Laptop\Documents\Project\AbirAyari\EventPlanner\Event_Planner_2A6\projetINVICTUS\dialogasma.h"
 #include "dialogahmed.h"
 
 // include the header of your workspace here
