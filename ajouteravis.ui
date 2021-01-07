@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ajouteravis</class>
+ <widget class="QWidget" name="ajouteravis">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>251</width>
+    <height>391</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QLabel" name="ajouteravis_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string>backgroud-color:white;</string>
+   </property>
+   <property name="text">
+    <string>Ajouter Client</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="retour">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>260</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { color: red; }
+</string>
+   </property>
+   <property name="text">
+    <string>retour</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>260</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { color: red; }
+</string>
+   </property>
+   <property name="text">
+    <string>ajouter</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_idclient_avis">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>67</y>
+     <width>86</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { color: red; }
+</string>
+   </property>
+   <property name="text">
+    <string>CIN</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_id_avis">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>116</y>
+     <width>72</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { color: red; }
+</string>
+   </property>
+   <property name="text">
+    <string>Nom</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="avis_edit">
+   <property name="geometry">
+    <rect>
+     <x>109</x>
+     <y>166</y>
+     <width>114</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>backgroud-color:white;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="id_edit_avis">
+   <property name="geometry">
+    <rect>
+     <x>109</x>
+     <y>117</y>
+     <width>114</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>backgroud-color:white;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="film_edit">
+   <property name="geometry">
+    <rect>
+     <x>109</x>
+     <y>215</y>
+     <width>114</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>backgroud-color:white;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_avis">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>165</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { color: red; }
+</string>
+   </property>
+   <property name="text">
+    <string>Prenom</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_nom_film">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>214</y>
+     <width>54</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit { color: red; }
+</string>
+   </property>
+   <property name="text">
+    <string>E mail</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="id_client_avis">
+   <property name="geometry">
+    <rect>
+     <x>109</x>
+     <y>68</y>
+     <width>114</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string>backgroud-color:white;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>330</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../../Downloads/res/lagoralogo.png</pixmap>
+   </property>
+  </widget>
+  <zorder>label_idclient_avis</zorder>
+  <zorder>label_id_avis</zorder>
+  <zorder>avis_edit</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>id_edit_avis</zorder>
+  <zorder>film_edit</zorder>
+  <zorder>retour</zorder>
+  <zorder>label_avis</zorder>
+  <zorder>label_nom_film</zorder>
+  <zorder>ajouteravis_2</zorder>
+  <zorder>id_client_avis</zorder>
+  <zorder>label_2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

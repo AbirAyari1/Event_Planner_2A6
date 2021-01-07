@@ -1,27 +1,30 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <QMessageBox>
+#include "QFile"
+#include <QTextStream>
 #include "connection.h"
 
 int main(int argc, char *argv[])
 {
+
     QApplication a(argc, argv);
-    MainWindow w;
-    Connection c;
-    bool test=c.createconnect();
-    if(test)
-    {w.show();
-        QMessageBox::critical(nullptr, QObject::tr("database is open"),
-                    QObject::tr("connection successful.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-}
+    QFile f("C:/Users/ahmed/Documents/esprit2021/style.qss");
+    if (!f.exists())
+    {
+        printf("Unable to set stylesheet, file not found\n");
+    }
     else
-        QMessageBox::critical(nullptr, QObject::tr("database is not open"),
-                    QObject::tr("connection failed.\n"
-                                "Click Cancel to exit."), QMessageBox::Cancel);
-
-
+    {
+        f.open(QFile::ReadOnly | QFile::Text);
+        QTextStream ts(&f);
+        qApp->setStyleSheet(ts.readAll());
+    }
+    connection c;
+    if(c.create_connection())
+        qDebug()<<"done";
+     else qDebug()<<"error";
+    MainWindow w;
+    w.show();
 
     return a.exec();
 }

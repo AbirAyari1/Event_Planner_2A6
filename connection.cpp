@@ -1,23 +1,24 @@
 #include "connection.h"
 
-Connection::Connection()
+connection::connection()
+{
+}
+connection::~connection()
+{
+}
+bool connection::create_connection()
 {
 
+
+    QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
+
+    mydb.setDatabaseName("C:/Users/ahmed/Documents/try1/6jan 0135/pcr.db");
+
+
+
+    if (mydb.open())
+        return true;
+    else return false;
+
 }
 
-bool Connection::createconnect(){
-    bool test=false;
-    QSqlDatabase db = QSqlDatabase::addDatabase("QODBC");
-    db.setDatabaseName("Source_Projet2A");
-    db.setUserName("Hazem");//inserer nom de l'utilisateur
-    db.setPassword("Hazem");//inserer mot de passe de cet utilisateur
-
-    if (db.open())
-    test=true;
-
-
-
-
-
-      return  test;
-}
