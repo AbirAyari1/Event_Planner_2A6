@@ -70,11 +70,14 @@ int arduino::write_to_arduino(QByteArray d )
 }
 QByteArray arduino::read_from_arduino()
 {
-    if(serial->isReadable())
-    {
-        data=serial->readAll();
-        return data;
-    }
+    QByteArray ba,baRead;
+           while(serial->canReadLine()){
+               baRead = serial->readLine();
+               if(baRead.size() > 0/*1?*/)
+                  ba.append(baRead);
+               return ba;
+           }
+           qDebug() << "All read" << ba;
 
 }
 

@@ -1881,7 +1881,7 @@ background: #d1d1d1;</string>
       <widget class="QPushButton" name="pushButton_imprimer_commande">
        <property name="geometry">
         <rect>
-         <x>230</x>
+         <x>160</x>
          <y>360</y>
          <width>131</width>
          <height>41</height>
@@ -1901,7 +1901,7 @@ font: bold, &quot;Comic Sans MS&quot;;</string>
       <widget class="QPushButton" name="pushButton_Statistique">
        <property name="geometry">
         <rect>
-         <x>390</x>
+         <x>350</x>
          <y>360</y>
          <width>161</width>
          <height>41</height>
@@ -1921,9 +1921,9 @@ font: bold, &quot;Comic Sans MS&quot;;</string>
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
-         <x>70</x>
+         <x>670</x>
          <y>360</y>
-         <width>131</width>
+         <width>321</width>
          <height>41</height>
         </rect>
        </property>
@@ -1936,6 +1936,32 @@ font: bold, &quot;Comic Sans MS&quot;;</string>
        </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;TextLabel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>360</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>on</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>390</y>
+         <width>93</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>off</string>
        </property>
       </widget>
      </widget>

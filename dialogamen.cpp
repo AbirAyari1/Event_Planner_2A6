@@ -80,7 +80,7 @@ void Dialogamen::update_label()
     QString DataAsString = QString(data);
     qDebug()<< data;
 
-     ui->label_2->setText("temp : "+data);
+     ui->label_2->setText(data);
 
     if (data=="21"||data=="22"||data=="23"||data=="24"){
         if (messageboxactive==0){
@@ -599,3 +599,13 @@ void Dialogamen::on_pushButton_Statistique_clicked()
                         chartView->show();
 }
 
+
+void Dialogamen::on_pushButton_2_clicked()
+{
+    A.write_to_arduino("0") ;
+}
+
+void Dialogamen::on_pushButton_clicked()
+{
+    A.write_to_arduino("1") ;
+}

@@ -85,6 +85,10 @@ private slots:
 
 
     void update_label();
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::Dialogamen *ui;
     fournisseur tmpfournisseur;
